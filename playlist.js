@@ -6,7 +6,8 @@ function Playlist(name) {
 }
 
 Playlist.prototype.addSong = function(songTitle) { //Adds song to the playlist
-  this.songs.push(songTitle); //Adds the song to the END of this array; 'this' refers to the specific instance in playlist
+  this.songs.push(songTitle); //Adds the song to the END of this array
+  //'this' refers to the playlis object that CALLS addsong()
 };
 
 Playlist.prototype.playFirst = function() { //plays the first song of the playlist
@@ -14,6 +15,7 @@ Playlist.prototype.playFirst = function() { //plays the first song of the playli
     this.currentSong = this.songs[0]; //sets current song to first
     console.log("Now playing:", this.currentSong);
   }
+
 };
 
 Playlist.prototype.skipSong = function() { //skips current song and moves to a new one
@@ -31,6 +33,11 @@ Playlist.prototype.listSongs = function() { //lists all the songs in the playlis
   console.log("Songs:", this.songs.join(", ")); //join song titles into a single string 
 };
 
+
+/* Improvement:
+-I suggest coding it so that if there are no more songs left to skip or on last one, you could skip to the first song
+so it doesn't make it so that the user stops listening to music. 
+*/
 
 let myMix = new Playlist("My Chill Mix");
 myMix.addSong("Lofi Study");
