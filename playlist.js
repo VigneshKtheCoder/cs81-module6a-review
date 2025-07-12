@@ -46,3 +46,9 @@ myMix.addSong("Evening Jazz");
 myMix.playFirst(); //plays lofi
 myMix.skipSong(); //plays chillhop
 myMix.listSongs(); //plays jazz
+
+// new method to list all songs in the playlisr
+Playlist.prototype.listSongs = function() {
+  console.log("Playlist:", this.name);
+  console.log("Songs:", this.songs.join(", ")); 
+};
