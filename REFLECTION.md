@@ -1,0 +1,5 @@
+1. Hardest part: the trickiest part was understanding the 'this' and prototype values in the addsong() method. I got confused for a while of how the 'this' code connects to call the function itself. Also, it was also tricky to understand how 'shift()' in skipsong() both the songs array and the current song. However, I understood it as I kept reading the program. 
+
+2. The keyword 'this' refers to the current instance and place of the playlist object. It allows each method to access and change the specific data. 'this' connects the object's properties and methods
+
+3. I would prob make the code a bit shorter and more robust. for example, I would change the code so that if there are no more songs to skip, then skip to the first song in the playlist, or just let the user add a new song. I would also make new features like 'removesongtitle()' to remove some of the titles. 
